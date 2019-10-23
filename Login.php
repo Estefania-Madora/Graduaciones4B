@@ -11,7 +11,7 @@
         <div class="col-md-6">
         <form action="resultado.php" method="GET">
          <div class="form-group">
-            <label for="">}Usuarioi</label>
+            <label for="">Usuario</label>
             <input type="text" class="form-control" name="Usuario">
          </div>
          <div class="form-group">
