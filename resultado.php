@@ -8,13 +8,13 @@
 <body>
     <p class="text-info">
         <?php
-        $Usuario=$_GET["Usuario"];
+        $Usuario=$_POST["Usuario"];
         echo$Usuario;
         ?>
     </p>
     <p class="text-info">
         <?php
-        $Password=$_GET["PASSWORD"];
+        $Password=$_POST["password"];
         echo$Password;
         ?>
     </p>
