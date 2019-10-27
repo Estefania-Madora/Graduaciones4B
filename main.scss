@@ -1,11 +1,11 @@
 $jumbotron-bg:transparent;
-$jumbotron-color:#ffff;
+$jumbotron-color:#8d71dd;
 
-$blue:#250777;
+$blue:rgb(19, 31, 138);
 
 @import"node_modules/bootstrap/scss/bootstrap.scss";
 .padding{
     margin: 2.5em;
     padding: 2.5em;
-    background: #ffff;
+    background: rgb(11, 74, 156);
 }
