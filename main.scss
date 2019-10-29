@@ -12,3 +12,42 @@ $blue:rgb(19, 31, 138);
     background-image: url(../Imagenes/download.jpg);
     background-size: cover;
 }
+.display-4{
+    color: rgba(15, 64, 128, 0.952);
+}
+.lead{
+    color: rgba(15, 64, 128, 0.952);
+}
+section.Paquetes{
+    display:inline-block;
+    text-align:center;
+    width: 250px;
+    background-color: rgba(35, 142, 185, 0.514);
+    color: rgba(114, 28, 117, 0.788);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgba(23, 189, 98, 0.514);
+}
+section.Paquete p{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 24px;
+            line-height: 1.3;
+            text-align: justify;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            
+        }
+
+section.Paquete span{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 24px;
+            line-height: 1.3;
+            text-align: justify;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            
+        }
+section.Paquetes.uno{
+    margin-left: 17%;
+}      
