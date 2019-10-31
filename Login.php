@@ -1,9 +1,6 @@
 <?php
-
 session_start();
 session_destroy();
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,14 +13,35 @@ session_destroy();
     <script>
     $(function(){
       $boton=$("button");
-      $boton.on("click".function(evento){
+      $spin=$("fa-spin");
+      $boton.on("click",function(evento){
          evento.preventDefault();
-         var Usuario=$('[name]="Usuario"');
-         var Contrasena=$('[name]="password"');
+         $boton.prop("disable",true);
+         $spin.fadeIn();
+         var Usuario1=$('[name="Usuario"]').val();
+         var Contrasena=$('[name="password"]').val();
 
          $.ajax({
-            
-         })
+            url:"resultado.php",
+            method:"POST",
+            data:{
+               Usuario:Usuario1,
+              password:Contrasena,
+            }
+         }).done(function(informacion){
+            var json=JSON.parse(informacion);
+
+            console.log(json);
+            $boton.prop("disable",false);
+            $spin.fadeOut();
+            if(json.codigo=="0"){
+               $("#mensaje").html(json.mensaje);
+            }
+            else if(json.codigo=="1"){
+               window.location.href="vip.php";
+            }
+
+         });
       });
     });
     </script>
@@ -48,6 +66,9 @@ session_destroy();
          </div>
          <button class="btn btn-primary">Enviar Datos</button>
          <i class="fas fa-sync fa-spin"></i>
+         <div id="mensaje">
+
+         </div>
         </form>
      </div>
  </section>
